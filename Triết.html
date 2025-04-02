@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/04/anh-cuoi-34.jpg" type="image/x-icon">
+    <style>
+.hotline-phone-ring-circle{width:85px;height:85px;top:10px;left:10px;position:absolute;background-color:transparent;border-radius:100%;border:2px solid #e60808;-webkit-animation:phonering-alo-circle-anim 1.2s infinite ease-in-out;animation:phonering-alo-circle-anim 1.2s infinite ease-in-out;transition:all .5s;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;opacity:.5}
+.hotline-phone-ring-circle-fill{width:55px;height:55px;top:22px;left:26px;position:absolute;background-color:rgba(230,8,8,.7);border-radius:100%;border:2px solid transparent;-webkit-animation:phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;animation:phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;transition:all .5s;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%}
+.hotline-phone-ring-img-circle{background-color:#e4212a;width:33px;height:33px;top:33px;left:37px;position:absolute;background-size:20px;border-radius:100%;border:2px solid transparent;-webkit-animation:phonering-alo-circle-img-anim 1s infinite ease-in-out;animation:phonering-alo-circle-img-anim 1s infinite ease-in-out;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;align-items:center;justify-content:center}
+.hotline-phone-ring-img-circle .pps-btn-img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.hotline-phone-ring-img-circle .pps-btn-img img{width:20px;height:20px}
+
+.hotline-bar{position:absolute;background:#e88a25;background:-webkit-linear-gradient(left,#e88a25,#d40000);background:-o-linear-gradient(right,#e88a25,#d40000);background:-moz-linear-gradient(right,#e88a25,#d40000);background:linear-gradient(to right,#e88a25,#e4212a);height:40px;width:200px;line-height:40px;border-radius:3px;padding:0 10px;background-size:100%;cursor:pointer;transition:all .8s;-webkit-transition:all .8s;z-index:9;box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.1);border-radius:50px !important;border:2px solid #fff;left:33px;bottom:37px}.hotline-bar>a{color:#fff;text-decoration:none;font-size:18px;font-weight:900;text-indent:50px;display:block;letter-spacing:1px;line-height:38px;font-family:Arial}.hotline-bar>a:hover,.hotline-bar>a:active{color:#fff}@-webkit-keyframes phonering-alo-circle-anim{0%{-webkit-transform:rotate(0) scale(.5) skew(1deg);-webkit-opacity:.1}30%{-webkit-transform:rotate(0) scale(.7) skew(1deg);-webkit-opacity:.5}100%{-webkit-transform:rotate(0) scale(1) skew(1deg);-webkit-opacity:.1}}@-webkit-keyframes phonering-alo-circle-fill-anim{0%{-webkit-transform:rotate(0) scale(.7) skew(1deg);opacity:.6}50%{-webkit-transform:rotate(0) scale(1) skew(1deg);opacity:.6}100%{-webkit-transform:rotate(0) scale(.7) skew(1deg);opacity:.6}}@-webkit-keyframes phonering-alo-circle-img-anim{0%{-webkit-transform:rotate(0) scale(1) skew(1deg)}10%{-webkit-transform:rotate(-25deg) scale(1) skew(1deg)}20%{-webkit-transform:rotate(25deg) scale(1) skew(1deg)}30%{-webkit-transform:rotate(-25deg) scale(1) skew(1deg)}40%{-webkit-transform:rotate(25deg) scale(1) skew(1deg)}50%{-webkit-transform:rotate(0) scale(1) skew(1deg)}100%{-webkit-transform:rotate(0) scale(1) skew(1deg)}}@media (max-width:768px){.hotline-bar{display:none}}
+
+.hotline-phone-ring-img-circle .pps-btn-img img {
+    width: 20px;
+    height: 20px;
+}
+img {
+    border: none;
+}
+.hotline-phone-ring-wrap {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    z-index: 1111111;
+}
+.hotline-phone-ring {
+    position: relative;
+    visibility: visible;
+    background-color: transparent;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    z-index: 11;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transition: visibility .5s;
+    left: 0;
+    bottom: 0;
+    display: block;
+}
+.float-icon-hotline {
+    display: block;
+    width: 40px;
+    position: fixed;
+    bottom: 85px;
+    left: 33px;
+    z-index: 999999;
+}
+.float-icon-hotline ul {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.float-icon-hotline ul li {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.float-icon-hotline ul li a#messengerButton {
+    padding: 0px !important;
+    background: transparent !important;
+    border: 0px !important;
+}
+@media only screen and (min-width: 960px)
+{
+	.float-icon-hotline ul li .fa {
+		background-size: contain !important;
+	}
+}
+.float-icon-hotline ul li .fa-phone {
+    background-color: #ed1c24;
+}
+.float-icon-hotline ul li .fa {
+    background-color: #ed1c24;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 36px;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 2px solid #fff;
+}
+.animated.infinite {
+    animation-iteration-count: infinite;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.tada {
+    animation-name: tada;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.float-icon-hotline ul li span {
+    display: inline-block;
+    padding: 0;
+    background-color: #ff6a00;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 36px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 0;
+    width: 0;
+    overflow: hidden;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    background-color: #ff6a00;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+ul.left-icon.hotline {
+    margin-left: 0px !important;
+}
+.float-icon-hotline ul li .fa-zalo {
+    background: url(https://netweb.vn/img/hotline/zalo.png) center center no-repeat;
+}
+.float-icon-hotline ul li .fa-zalo:hover {
+    background: #ef0303 url(https://netweb.vn/img/hotline/zalo.png) center center no-repeat;opacity:.5;
+}
+.float-icon-hotline ul li .fa-messenger {
+    background:  url(https://netweb.vn/img/hotline/fb.png) center center no-repeat;
+}
+.float-icon-hotline ul li .fa-messenger:hover {
+    background: #168efb url(https://netweb.vn/img/hotline/fb.png) center center no-repeat;opacity:.5;
+}              
+    .slogan {
+    background-color: rgb(34, 33, 33) !important;
+    text-align: center !important;
+    text-align: middle !important;
+    width: 95.89%;
+    padding-right: 0.5rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1;
+    max-width: 90%;
+    padding-right: 13rem;
+    padding-left: 1rem;
+}
+.block_3 {
+    flex: 0 0 auto;
+    width: 11.1%;
+    color: red;
+}
+  body {
+    background-color: #2b303b;
+    color: #63717f;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  p {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .slogan {
+    background-color: #2b303b;
+    padding: 20px;
+    text-align: center;
+  }
+.image-align-left {
+    float: left;
+    margin-right: 10px;
+    background-color:black;
+  }
+
+  .image-align-right {
+    float: right;
+    margin-right: 10px;
+    background-color:black;
+  }
+  .container-1 input#search{
+  width: 300px;
+  height: 50px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.container-1{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+.box{
+  margin: 5px 0 0 0;
+  width: 10px;
+  height: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="hotline-phone-ring-wrap">
+        <div class="hotline-phone-ring">
+            <div class="hotline-phone-ring-circle"></div>
+            <div class="hotline-phone-ring-circle-fill"></div>
+            <div class="hotline-phone-ring-img-circle"> <a href="tel:0333699436" class="pps-btn-img"> <img src="https://netweb.vn/img/hotline/icon.png" alt="so dien thoai" width="50"> </a></div>
+        </div>
+        <div class="hotline-bar">
+            <a href="tel:0333699436"> <span class="text-hotline">0333699436</span> </a>
+        </div>
+    
+    </div>
+    <div class="slogan">
+        <div class="row">
+            <div class="block_3">
+            
+            <a href="HK2.html"><img src="data:image/png;base64,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" alt="Logo" style="width: 100%; height: auto;" ></a>
+                </div>
+            <div class="block_3">
+                <h3><a href="https://www.facebook.com/share/15LNeVZdwZ/" style="text-decoration: none; text-decoration-color: tomato; color: yellow; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;"> Năng động</a></h3>
+            </div>
+            
+            <div class="block_3">
+                <h3><a href="https://www.facebook.com/share/1HNmxGeAK5/" style="text-decoration: none; text-decoration-color: tomato; color: yellow; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Năng động</a></h3>
+            </div>
+            <div class="block_3">
+                <h3><a href="https://www.facebook.com/share/19nTEANwM2/" style="text-decoration: none; text-decoration-color: tomato; color: yellow; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Năng động</a></h3>
+            </div>
+            <div class="block_3">
+                <h3><a href="https://www.facebook.com/share/1AGh98L1wz/" style="text-decoration: none; text-decoration-color: tomato; color: #fff;"> Năng động</a></h3>
+            </div>
+            <div class="block_3">
+                <h3><a href="https://www.facebook.com/share/16JWoKuj15/" style="text-decoration: none; text-decoration-color: tomato; color: #fff;"> Năng động</a></h3>
+            </div>
+            <div class="block_3">
+                <h3>Đam mê</h3>
+            </div>
+            <div class="block_3">
+                <h3>Đam mê</h3>
+            </div>
+            <div class="block_3">
+                <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                   <input type="search" id="search" placeholder="Search..." />
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <h2 style="color: red;">Triết học</h2>
+        <p><img class="image-align-left" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Nishi_Amane.jpg" alt="Logo" style="width: 30%; height: 40%; border-radius: 15%;" ></p>
+    <p>Thực tiễn của triết học được đặc trưng bởi một số đặc điểm chung: đó là một hình thức tra vấn lý tính, hướng đến sự hệ thống hóa, và thường xuyên phản tư phê phán về chính các phương pháp và tiền đề của nó. Triết học đòi hỏi sự suy tư chín chắn, lâu dài và sâu sắc về những vấn đề gây tranh cãi, khó giải quyết nhưng mang tính lâu bền, vốn gắn liền với bản chất và thân phận con người.</p>
+    <p>Mưu cầu triết lý về sự thông thái đòi hỏi phải đặt ra những vấn đề mang tính tổng quát và cơ bản. Hành động này thường không đưa đến những câu trả lời thẳng thắn nhưng có thể giúp một người hiểu sâu hơn về chủ đề, suy xét cuộc đời, xua tan mọi rối rắm và vượt qua những định kiến hay quan niệm tự dối mình gắn liền với lẽ thường. Chẳng hạn, Sokrates phát biểu rằng "một đời không tự vấn là một đời không đáng sống" để làm nổi bật vai trò của tra vấn triết học trong việc hiểu biết sự tồn tại của chính mình. Và theo Bertrand Russell, "người không có chút kiến thức triết học sẽ sống cuộc đời bị giam cầm trong những định kiến bắt nguồn từ lẽ thường, từ những niềm tin thông thường của thời đại mình hoặc quốc gia mình, và từ những nhận thức đã lớn lên trong tâm trí bản thân mà không có sự cộng tác hoặc ưng thuận từ lý trí chủ tâm của người đó".</p>
+    <p>Triết học là một lĩnh vực nghiên cứu rộng lớn, bao gồm nhiều nhánh khác nhau như triết học chính trị, triết học đạo đức, triết học khoa học, triết học ngôn ngữ, và nhiều lĩnh vực khác. Mỗi nhánh đều có những câu hỏi và vấn đề riêng biệt mà các nhà triết học cố gắng giải quyết.</p>
+    <p>Triết học không chỉ là một lĩnh vực học thuật mà còn là một phần quan trọng trong văn hóa và tư tưởng của con người. Nó giúp chúng ta hiểu rõ hơn về bản thân, xã hội, và thế giới xung quanh. Triết học cũng đóng vai trò quan trọng trong việc hình thành các giá trị đạo đức và nguyên tắc sống của con người.</p>
+    <p>Cuối cùng, triết học không chỉ là một lĩnh vực nghiên cứu mà còn là một cách sống. Nó khuyến khích chúng ta đặt câu hỏi, tìm kiếm sự thật, và không ngừng học hỏi. Triết học giúp chúng ta phát triển tư duy phản biện và khả năng phân tích, từ đó giúp chúng ta trở thành những cá nhân tốt hơn trong xã hội.</p>
+</body>
+</html>
